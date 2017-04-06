@@ -4,6 +4,7 @@
 # Suppost the log.txt was written in the time order.
 # ----------------------------------------------------------------------------------------------------------------- #
 
+# -*- coding: utf-8 -*-
 
 from model import parse
 import io
@@ -15,7 +16,7 @@ basedir = os.path.join(tempdir,'../../')
 blockfile = os.path.join(basedir,'log_output/blocked.txt')
 lfile = os.path.join(basedir,'log_input/log.txt')
 
-f = io.open(blockfile,'w')
+f = open(blockfile,'w')
 
 format = '%d/%b/%Y:%H:%M:%S'
 CP =  datetime.timedelta(seconds=20)  # check period of 20seconds for 3 consective login failure
